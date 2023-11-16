@@ -5,5 +5,5 @@ import org.example.Models.Move;
 import org.example.Models.Player;
 
 public interface WinningStrategy {
-    Player checkWinner(Board board, Move move);
+    boolean checkWinner(Board board, Move move);
 }

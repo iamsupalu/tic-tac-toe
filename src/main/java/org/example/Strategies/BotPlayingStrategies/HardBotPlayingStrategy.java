@@ -5,7 +5,7 @@ import org.example.Models.Move;
 
 public class HardBotPlayingStrategy implements BotPlayingStrategy{
     @Override
-    public Move makeNextMove(Board board) {
+    public Move makeMove(Board board) {
         return null;
     }
 }

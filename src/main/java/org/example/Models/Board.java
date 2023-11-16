@@ -7,6 +7,22 @@ public class Board {
     private int size;
     private List<List<Cell>> board;
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public List<List<Cell>> getBoard() {
+        return board;
+    }
+
+    public void setBoard(List<List<Cell>> board) {
+        this.board = board;
+    }
+
     public Board(int size) {
         this.size = size;
         board=new ArrayList<>();
@@ -23,10 +39,10 @@ public class Board {
             for(int j=0;j<size;j++){
                 Cell cell=board.get(i).get(j);
                 if(cell.getCellstate().equals(CellState.EMPTY)){
-                    System.out.println("|  |");
+                    System.out.print("|  |");
                 }
                 else{
-                    System.out.println("|"+ cell.getPlayer().getSymbol()+"|");
+                    System.out.print("|"+ cell.getPlayer().getSymbol().getSymbol()+"|");
                 }
             }
             System.out.println();

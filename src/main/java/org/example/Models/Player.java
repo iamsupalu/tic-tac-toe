@@ -1,5 +1,7 @@
 package org.example.Models;
 
+import java.util.Scanner;
+
 public class Player {
     private int id;
     private Symbol symbol;
@@ -43,5 +45,14 @@ public class Player {
 
     public void setPlayerType(PlayerType playerType) {
         this.playerType = playerType;
+    }
+
+    public Move makeMove(Board board){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please enter row index to make move");
+        int rowIndex=sc.nextInt();
+        System.out.println("Please enter col index to make move");
+        int colIndex=sc.nextInt();
+        return new Move(this, new Cell(rowIndex,colIndex));
     }
 }
